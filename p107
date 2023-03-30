@@ -20,4 +20,4 @@ change %= 10
 nCoin1 = change
 
 print("===거스름돈 출력===")
-print("500원: %d 100원:%d 10원:%d 1원:%d" %(nCoin500, nCoin100, nCoin10, nCoin1)
+print("500원: %d 100원:%d 10원:%d 1원:%d" %(nCoin500, nCoin100, nCoin10, nCoin1))
