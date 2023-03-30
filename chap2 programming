@@ -1,0 +1,51 @@
+#01
+
+x = int(input("x:"))
+y = int(input("y:"))
+print("두 수의 합:", x+y)
+print("두 수의 차:", x-y)
+print("두 수의 곱:", x*y)
+print("두 수의 평균:", (x+y)/2 )
+print("큰 수:", max(x,y))
+print("작은 수:", min(x,y))
+
+
+#05 화씨온도 섭씨온도 변환
+
+f = int(input("화씨 온도를 입력하시오:"))
+c = (f - 32.0) * (5/9)
+print("화씨 %d도는 섭씨 %.2f도에 해당합니다." %(f,c))
+
+
+#09 4자리 정수의 자리수 합 계산 프로그램
+num = int(input("4자리 정수:"))
+
+a = num // 1000
+num %= 1000
+
+b = num // 100
+num %= 100
+
+c = num // 10
+num %= 10
+
+d = num
+
+print(a + b + c + d)
+
+
+#11 완전한 파일 이름 작성 프로그램
+
+drive = input("드라이브 이름:")
+direc = input("디렉토리 이름:")
+file = input("파일 이름:")
+ext = input("확장자:")
+
+print("완전한 이름은 %s:%s%s.%s" %(drive, direc, file, ext)) 
+
+
+#12 100000에서 999999 사이의 숫자를 읽어서 천 단위 구분하는 프로그램 
+
+num = int(input("숫자를 입력하시오:"))
+print()
+print(format(num, ","))
