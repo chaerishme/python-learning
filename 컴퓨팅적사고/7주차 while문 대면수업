@@ -1,0 +1,98 @@
+#숫자 세기 기초
+n = 0
+while n <= 10 :
+    print(n)
+    n += 1         #n = n+1
+    
+print("End of program")
+
+또는
+n = 0
+while n < 10 :
+    n += 1
+    print(n)
+    
+print("End of program")
+
+
+#변형 :  10~100 출력
+n = 10
+while n <= 100 :
+    print(n)
+    n += 10
+    
+print("End of program")
+
+
+#1부터 n까지 더하기
+n = 1
+total = 0          #total 0으로 초기화
+
+while n <= 10 :
+    print(n)
+    total += n
+    n += 1         #n = n+1
+    
+print("1부터 10까지의 합은 %d입니다" %total)
+print("End of program")
+
+
+#입력받은 숫자까지의 합 구하기
+n = int(input("숫자를 입력하시오. :"))
+total = 0
+k = 1
+
+while k <= n :
+    total += k
+    k += 1
+
+print("1부터 %d까지의 합은 %d입니다." %(n, total)) 
+
+
+#시작값과 끝값 입력받아 합 구하기
+x = int(input("시작값을 입력하시오.: "))
+y = int(input("끝값을 입력하시오. : "))
+n = x           #시작값을 n에 넣어주기
+total = 0
+
+while n <= y :
+    total += n
+    n += 1
+
+print("%d부터 %d까지의 합은 %d입니다." %(x, y, total))
+print("End of program")
+
+
+#1부터 100까지 369 게임
+n = 1
+while n <= 100 :
+    if n % 3 == 0 :
+        print("박수")
+    else :
+        print(n)
+    n += 1
+print("EOP")
+
+
+# 구구단 3단 출력하기
+print ("구구단 3단")
+n = 1
+while n <= 9 :
+    print("3 x %d = %d" %(n, 3*n))
+    n += 1
+
+
+# 숫자 입력 받아서 구구단 출력하기
+n = int(input("몇 단을 출력할까요?"))
+x = 1
+while x <= 9 :
+    print("%d x %d = %d" %(n, x, x*n))
+    x += 1
+
+
+#1부터 100까지 4의 배수는 건너뛰기
+n = 1
+while n <= 100 :
+    if n % 4 != 0 :       #생각의 전환
+        print(n)        
+    n += 1
