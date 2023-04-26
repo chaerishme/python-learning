@@ -1,0 +1,74 @@
+#정수 구분하기
+n = int(input("정수 n을 입력하시오: "))
+
+if n > 0 :
+    print("입력하신 n은 양수입니다.")
+
+elif n == 0:
+    print("입력하신 n은 0입니다.")
+    
+else :
+    print("입력하신 n은 음수입니다.")
+
+print("프로그램을 종료합니다.")
+
+
+#학점 부여하기 - (1) print문
+s1 = int(input("중간고사 점수를 입력하시오.: "))
+s2 = int(input("기말고사 점수를 입력하시오.: "))
+avg = (s1 + s2) / 2
+
+if avg >= 85 :
+    print("A학점입니다.")
+elif avg >= 70 :
+    print("B학점입니다.")
+elif avg >= 60 :
+    print("C학점입니다.")
+else :
+    print("F학점입니다.")
+
+#학점 부여하기 - (2) grade 변수에 학점 넣어서 print문 하나만 사
+s1 = int(input("중간고사 점수를 입력하시오.: "))
+s2 = int(input("기말고사 점수를 입력하시오.: "))
+
+avg = (s1 + s2) / 2
+
+if avg >= 85 :
+    grade = "A학점"
+elif avg >= 70 :
+    grade = "B학점"
+elif avg >= 60 :
+    grade = "C학점"
+else :
+    grade = "F학점"
+
+print(grade)
+
+
+#기온에 따른 의상 추천하기
+
+high = int(input("최고 기온을 입력하시오: "))
+low = int(input("최저 기온을 입력하시오: "))
+calc = high - low
+
+if high >= 20 :
+    print("반팔 옷을 추천합니다.")
+elif high >= 15 :
+    print("긴팔 옷을 추천합니다.")
+
+if low <= 15 :
+    print("외투를 챙기세요.")
+
+if calc >= 10 :
+    print("일교차가 크니 건강 유의하세요.")
+    
+    
+#양의 정수를 입력받아 3의 배수인지 아닌지 판단하는 프로그램
+x = int(input("양의 정수를 입력하세요: "))
+
+if x>0 and x%3==0:
+    print("3의 배수입니다.")
+elif x>0 and x%3 !=0:
+    print("3의 배수가 아닙니다.")
+else :
+    print("잘못된 입력입니다. 프로그램을 종료합니다.")
