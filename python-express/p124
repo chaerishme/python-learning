@@ -1,0 +1,13 @@
+# 산술 퀴즈 프로그램
+# 난수 생성하기 import random, number = random.radint(1,100)
+# 부울변수 사용
+
+import random
+
+x = random.randint(1, 100)
+y = random.randint(1, 100)
+
+answer = int(input(f"{x} + {y} ="))
+
+flag = (answer == (x+y))
+print(flag)
