@@ -1,0 +1,89 @@
+#1
+
+class Animal:
+    def __init__(self, name, species, age, hungry_percent):
+        self.name = name
+        self.__species = species
+        self.__age = age
+        self.__hungry_percent = hungry_percent
+        self.__max_hungry_percent = 100
+    
+    #getter: 객체의 속성(attribute)를 조회하는 함수
+    def get_species(self):
+        return self.__species
+    
+    def get_age(self):
+        return self.__age
+    
+    def get_hungry_percent(self):
+        return self.__hungry_percent
+    
+    #setter: 객체의 속성(attribute)를 수정하는 함수
+    def __set_age(self, age):
+        self.__age = age
+    
+    def __set_hungry_percent(self, hungry_percent):
+        self.__hungry_percent = hungry_percent
+
+    def afterNyears(self,n): #n년 후 강아지의 나이
+        self.__set_age(self.__age + n)
+
+        print(f"{self.name}가 나이를 {n}살 더 먹었습니다.")
+        print(f"{self.name}가 나이는 {self.__age}살입니다.")
+
+        return self.__age
+    
+    def introduce(self): #강아지 소개
+        print(f"이름: {self.name}\n종: {self.__species}")
+        print(f"나이: {self.__age}\n배고픔:{self.__hungry_percent}%")
+        
+    def eatFood(self, full_increment): #강아지의 식사
+        if self.__max_hungry_percent <= self.__hungry_percent :
+            print(f"{self.name}는 이미 배가 부릅니다.")
+
+        print(f"{self.name}가 밥을 먹기 시작했습니다.")
+        self.__hungry_percent = min(self.__hungry_percent + full_increment, self.__max_hungry_percent)
+
+        print(f"{self.name}는 밥을 맛있게 먹었습니다.")
+        print(f"{self.name}의 배고픔이 {self.__hungry_percent}%가 되었습니다.")
+
+        return self.__hungry_percent
+    
+    def exercise(self,force): #강아지의 운동
+        print(f"{self.name}가 뛰어다니기 시작했습니다.")
+
+        self.__set_hungry_percent(self.__hungry_percent - force)
+
+        print(f"{self.name}는 이제 지쳤습니다.\n배고픔이 {self.__hungry_percent}%가 되었습니다.")
+
+        return self.__hungry_percent
+    
+
+    #2
+    from 객체지향1 import Animal
+
+mydog = Animal("두리", "포메라니안", 7, 30)
+mydog.introduce()
+
+print()
+
+print("종:",mydog.get_species())
+print("나이:",mydog.get_age())
+print("배고픔:",mydog.get_hungry_percent())
+
+print()
+
+new_age = mydog.afterNyears(3)
+print(f"mydog.get_age():{mydog.get_age()} new_age: {new_age}")
+
+print()
+
+new_hungry = mydog.eatFood(20)
+print(f"mydog.get_hungry_percent():{mydog.get_hungry_percent()} new_hungry: {new_hungry}")
+
+print()
+
+new_hungry2 = mydog.exercise(30)
+print(f"mydog.get_hungry_percent():{mydog.get_hungry_percent()} new_hungry2: {new_hungry2}")
+
+print()
