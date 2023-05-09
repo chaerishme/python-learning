@@ -1,0 +1,41 @@
+class Puppy :
+  def __init__(self, name, color, hapiness_percent) :
+    self.name = name
+    self.color = color
+    self.hapiness_percent = hapiness_percent
+    self.max_hapiness_percent = 100
+
+  def get_color(self) :
+    return self.color
+  
+  def get_hapiness_percent(self) :
+    return self.hapiness_percent
+
+  # 객체의 속성 수정  
+  def __set_color(self,color) :
+    self.__color = color
+
+  def introduce(self):  #강아지 소개
+    print(f"이름은 {self.name}이고,\n{self.color} 강아지 입니다.\n{self.hapiness_percent}%정도 행복합니다.")
+
+  def gowalk(self, full_increment): #강아지 산책
+    if self.max_hapiness_percent <= self.hapiness_percent :
+      print(f"{self.name}는 이미 행복합니다.")
+
+    print(f"{self.name}가 산책을 시작했습니다.")
+    self.hapiness_percent = min(self.hapiness_percent + full_increment, self.max_hapiness_percent)
+
+    print(f"{self.name}는 산책을 재밌게 했습니다.")
+    print(f"{self.name}의 행복도가 {self.hapiness_percent}%가 되었습니다.")
+
+    return self.hapiness_percent
+
+mypuppy = Puppy("두리","크림색",80)
+mypuppy.introduce()
+
+print()
+
+new_hapiness = mypuppy.gowalk(30)
+print(f"mypuppy.get_hapiness_percent(): {mypuppy.get_hapiness_percent()} new_hapiness:{new_hapiness}")
+
+print()
