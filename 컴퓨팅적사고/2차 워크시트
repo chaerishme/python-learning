@@ -1,0 +1,38 @@
+# 01
+print("=== 섭씨-화씨 온도변환기 ===")
+
+C = int(input("섭씨온도 입력 ->"))
+F = C * (9/5) + 32
+
+print("섭씨온도: %.2f 도" %C)
+print("화씨온도: %.2f 도" %F)
+
+
+#02
+print("=== 킬로미터-마일 거리변환 프로그램 ===")
+
+km = float(input("Km 거리 입력 ->"))
+miles = km / 1.60934
+
+print("입력한 킬로미터거리: %.2f km" %km)
+print("변환된 마일거리: %.2f miles" %miles)
+
+
+#09
+x = int(input("정수1을 입력하시오."))
+y = int(input("정수2를 입력하시오."))
+
+print("%5d + %5d = %5d" %(x, y, x+y))
+print("%5d - %5d = %5d" %(x, y, x-y))
+print("%5d x %5d = %5d" %(x, y, x*y))
+print("%5d / %5d = %5d" %(x, y, x/y))
+
+
+#10
+a = float(input("실수1을 입력하시오."))
+b = float(input("실수2를 입력하시오."))
+
+print("%8.2f + %8.2f = %8.2f" %(a, b, a+b))
+print("%8.2f - %8.2f = %8.2f" %(a, b, a-b))
+print("%8.2f x %8.2f = %8.2f" %(a, b, a*b))
+print("%8.2f / %8.2f = %8.2f" %(a, b, a/b))
