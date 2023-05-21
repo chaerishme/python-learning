@@ -91,9 +91,7 @@ while a <= 10 :
 #2  4의 배수 건너뛰기
 b = 1
 while b <= 10 :
-  if b % 4 == 0 :
-    print("")
-  else :
+  if b % 4 != 0 :
     print(b)
   b += 1
 
