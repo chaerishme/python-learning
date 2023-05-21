@@ -1,0 +1,67 @@
+#1번
+[1]
+a = 1500
+b = 2800
+c = 500
+tot = a * 20 + b * 10 + c * 30 
+print( "총 가격 : ", tot, "원" )
+
+[2]
+sale = tot * 0.85
+print( "할인가 : ", sale, "원" )
+
+#2번
+[1] 
+x = 4558000
+y = x * 1.035
+z = format(y,",")
+print("내년의 등록금 : ", z, "원")
+
+[2]
+a = x * (1.035) ** 10
+b = format(a,",")
+print("10년 후의 등록금 : ", b,"원")
+
+#3번
+[1번]
+a = 1200
+x = a//36
+print("꽉 찬 상자는 총", x, "개 완성된다.")
+
+[2번]
+y = a%36
+print("상자에 포함되지 않는 사과는", y, "개이다.")
+
+#4번
+import turtle as t
+
+t.color('blue')
+t.width(4)
+
+for i in range(4) :
+	t.fd(200)
+	t.rt(90)
+
+for i in range(3) :
+	t.fd(200)
+	t.lt(120)
+
+#5번
+import turtle as t
+
+for i in range(5) :
+	t.fd(200)
+	t.rt(144)
+
+#6번
+r = 5
+넓이 = (r ** 2) * 3.14
+print("원의 넓이 :", 넓이)
+
+#7번
+result = 5 ** (1/2) - 5 ** (1/3)
+print(result)
+
+#8번
+result = 2 ** 24
+print(result)
